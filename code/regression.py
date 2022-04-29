@@ -40,7 +40,7 @@ print(y_test)'''
 # X_test = X_test_a[:200]
 # y_test = y_test_a[:200]
 ##################### logistic Regression. newton_CG is the best.
-def testLogistic(X_train, y_train, X_test, y_test):
+def testLogistic(X_train, y_train, X_test, y_test, C=-1, gamma=-1):
     best_C = 0
     best_mae = 1
     Clist = []
@@ -58,7 +58,7 @@ def testLogistic(X_train, y_train, X_test, y_test):
             best_mae = mae
             best_param = logreg.get_params()
             best_pred = y_predict
-    return y_predict
+    return best_mae, best_pred
 
 
 
@@ -72,7 +72,7 @@ def testLogistic(X_train, y_train, X_test, y_test):
 # print("MAE is ", Mae)
 # print()
 
-def testLinear():
+def testLinear(X_train, y_train, X_test, y_test, C=-1, gamma=-1):
     # Linear Regression.
     linearReg = LinearRegression()
     linearReg.fit(X_train, y_train)
@@ -82,6 +82,7 @@ def testLinear():
     print(linearReg.get_params())
     Mae = np.mean([abs(y_predict_linear[i] - list(y_test)[i]) for i in range(len(y_predict_linear))])
     print("Mae for LinearRegression is: ", Mae)
+    return Mae, y_predict_linear
 
 
 def testRBFSVR(X_train, y_train_svr, X_test, y_test=False, C=0.1, gamma=0.1):
@@ -89,6 +90,7 @@ def testRBFSVR(X_train, y_train_svr, X_test, y_test=False, C=0.1, gamma=0.1):
     regr = SVR(kernel="rbf", C=C, gamma=gamma)
     regr.fit(X_train, y_train_svr)
     y_predict = regr.predict(X_test)
+    print(spearmanr(y_predict, list(y_test)))
     try:
         mae = np.mean([abs(y_predict[i] - list(y_test)[i]) for i in range(len(y_predict))])
     except TypeError:
@@ -103,7 +105,7 @@ def testRBFSVR(X_train, y_train_svr, X_test, y_test=False, C=0.1, gamma=0.1):
 # 	print("Mae for rbf svr", np.mean([abs(y_rbf[i] - list(y_test)[i]) for i in range(len(y_rbf))]))
 
 
-def testPOLYSVR():
+def testPOLYSVR(X_train, y_train_svr, X_test, y_test):
     # best_C = 0
     # best_mae = 1
     # Clist = []
@@ -126,7 +128,9 @@ def testPOLYSVR():
 
     svr_poly = SVR(kernel='poly', C=1e3, degree=2)
     y_poly = svr_poly.fit(X_train, y_train_svr).predict(X_test)
-    print("Mae for Poly svr", np.mean([abs(y_poly[i] - list(y_test)[i]) for i in range(len(y_predict))]))
+    mae = np.mean([abs(y_poly[i] - list(y_test)[i]) for i in range(len(y_poly))])
+    print("Mae for Poly svr", mae)
+    return mae, y_poly
 
 
 def testLinearSVR(X_train, y_train_svr, X_test, y_test, c, n=None):
