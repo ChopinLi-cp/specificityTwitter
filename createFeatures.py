@@ -108,7 +108,7 @@ class ModelNewText(object):
     def fPostag(self):
         sentlst = [features.RawSent(r) for r in self.test]
         pos_tag = features.extractPOS(sentlst)
-        Useful_Tag = ['DT', 'NN', "VB", 'JJ', 'IN', '.', 'PRP', 'NNP', 'WP']
+        Useful_Tag = ['DT', 'NN', "VB", 'JJ', 'IN', '.', 'PRP', 'NNP', 'WP', 'PAR', 'NON_PAR']
         for i in Useful_Tag:
             self._add_feature(i, pos_tag.loc[:, i])
 
@@ -180,6 +180,13 @@ class ModelNewText(object):
             file = features.NE_Concrete_Emo(sentlst)
             self._add_feature("Negative", file.loc[:, 'Negative'])
             self._add_feature("Positive", file.loc[:, 'Positive'])
+
+    # deixis word features
+    def transDeixisFeature(self):
+        normalize = True
+        recs = [features.RawSent(r) for r in self.test]
+        self._add_feature("personDeixis", features.numPersonalDeixis(recs, normalize))
+        self._add_feature("tmpDeixis", features.numTemporalDeixis(recs, normalize))
 
     # def transformTweet(self):
     # 	recs = [features.RawSent(r) for r in self.test]

@@ -24,6 +24,7 @@ def getFeatures(fin):
     a.transLexical()
     a.transEmbedding()
     a.transEmotionFeature()
+    a.transDeixisFeature()
     a.transform_features()
 
 
@@ -81,5 +82,5 @@ if __name__ == "__main__":
         "Predictor: please make sure that your input sentences are WORD-TOKENIZED for better prediction.\n")
     args = argparser.parse_args()
     getFeatures(args.inputfile)
-    preds = predict(model=MODELFILE)
-    writeSpecificity(preds, args.outputfile)
+    # preds = predict(model=MODELFILE)
+    # writeSpecificity(preds, args.outputfile)

@@ -24,6 +24,10 @@ NEGATIVE = RT + "model/resources/negative-words.txt"
 NER_title = {'ORGANIZATION': 0, "PERCENT": 1, 'PERSON': 2, 'DATE': 3,
              'MONEY': 4, 'TIME': 5, 'LOCATION': 6}
 
+personal_deixis_words = ["i", "me", "my", "mine", "you", "your","yours", "he", "she", "her", "hers", "his", "him", "it", "its", "we",
+                         "our", "ours", "us", "they", "them", "their", "theirs"]
+
+temporal_deixis_words = ["today", "tomorrow", "yesterday", "now", "then", "ago", "soon", "this", "that", "next", "last"]
 
 class RawSent:
 
@@ -78,6 +82,20 @@ def extractPOS(sentlst):
                 word_tag = word_tag.split("_")
                 tag = word_tag[1]
                 tag_list.append(tag)
+                if tag == "JJ":
+                    tag_list.append('PAR')  # Participle
+                    tag_list.append('NON_PAR')
+                    word_without_tag = word_tag[0]
+                    if word_without_tag.endswith("ed") or word_without_tag.endswith("en") or word_without_tag.endswith("nt"):
+                        if 'PAR' not in tag_with_Number:
+                            tag_with_Number['PAR'] = 1
+                        else:
+                            tag_with_Number['PAR'] += 1
+                    else:
+                        if 'NON_PAR' not in tag_with_Number:
+                            tag_with_Number['NON_PAR'] = 1
+                        else:
+                            tag_with_Number['NON_PAR'] += 1
                 if tag not in tag_with_Number:
                     tag_with_Number[tag] = 1
                 else:
@@ -85,7 +103,7 @@ def extractPOS(sentlst):
 
             all_tags.append(tag_list)
         # Set default useful_tag.
-        Useful_Tag = ['DT', 'NN', "VB", 'JJ', 'IN', '.', 'PRP', 'NNP', 'WP']
+        Useful_Tag = ['DT', 'NN', "VB", 'JJ', 'IN', '.', 'PRP', 'NNP', 'WP', 'PAR', 'NON_PAR']
         big_matrix = []
         tag_2_index = {}
         for index, tag in enumerate(Useful_Tag):
@@ -281,6 +299,30 @@ def numCapLetters(sentlst, normalize=True):
     for t in sentlst:
         v = len([x for x in t.getStr() if x.isupper()])
         ret.append((v + 0.0) / t.getNumTokens() if normalize else v)
+    return ret
+
+
+# Count the number of Capital Letters.
+def numPersonalDeixis(sentlst, normalize=True):
+    ret = []
+    for t in sentlst:
+        v = len([x for x in t.getTokens() if x in personal_deixis_words])
+        # ret.append((v + 0.0) / t.getNumTokens() if normalize else v)
+        ret.append(v)
+    return ret
+
+
+def numTemporalDeixis(sentlst, normalize=True):
+    ret = []
+    for t in sentlst:
+        # num=0
+        # for x in t.getStr():
+        #     print(x)
+        #     if x in temporal_deixis_words:
+        #         num += 1
+        v = len([x for x in t.getTokens() if x in temporal_deixis_words])
+        # ret.append((v + 0.0) / t.getNumTokens() if normalize else v)
+        ret.append(v)
     return ret
 
 
