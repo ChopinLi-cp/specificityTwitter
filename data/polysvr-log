@@ -1,0 +1,208 @@
+start at Sat Apr 30 12:56:01 2022
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231]
+           0    1         2         3    4    ...       224  225  226  227  228
+0     3.533333   30  0.200000  0.366667  0.0  ...  0.062500    2    2    3    0
+1     3.826087   23  0.130435  0.521739  0.0  ...  0.040000    0    0    1    1
+2     3.875000   16  0.375000  0.312500  0.0  ...  0.000000    0    0    2    1
+3     3.354839   31  0.354839  0.354839  0.0  ...  0.060606    0    0    2    0
+4     5.000000    6  0.666667  0.666667  0.0  ...  0.000000    0    0    1    0
+...        ...  ...       ...       ...  ...  ...       ...  ...  ...  ...  ...
+5762  5.454545   22  0.363636  0.045455  0.0  ...  0.000000    1    1    1    0
+5763  5.136364   22  0.181818  0.318182  0.0  ...  0.040000    2    2    0    0
+5764  3.000000   17  0.235294  0.235294  0.0  ...  0.000000    0    0    1    0
+5765  3.000000   14  0.000000  0.142857  0.0  ...  0.071429    0    0    1    0
+5766  3.642857   14  0.500000  0.642857  0.0  ...  0.105263    1    1    0    1
+
+[5767 rows x 229 columns]
+           0    1         2         3      4    ...       224  225  226  227  228
+5767  5.666667    6  0.333333  0.000000  0.000  ...  0.000000    0    0    1    0
+5768  4.000000    8  0.625000  1.000000  0.125  ...  0.000000    0    0    0    0
+5769  3.416667   12  0.583333  0.416667  0.000  ...  0.000000    1    1    0    0
+5770  3.500000    8  0.500000  0.625000  0.000  ...  0.000000    1    1    0    0
+5771  5.000000   17  0.352941  0.411765  0.000  ...  0.047619    2    2    0    1
+...        ...  ...       ...       ...    ...  ...       ...  ...  ...  ...  ...
+6262  3.750000   12  0.583333  0.250000  0.000  ...  0.066667    3    3    0    0
+6263  4.611111   18  0.222222  0.111111  0.000  ...  0.052632    1    1    2    0
+6264  4.285714    7  0.428571  0.714286  0.000  ...  0.111111    0    0    2    0
+6265  3.750000   16  0.437500  0.312500  0.000  ...  0.055556    1    1    2    1
+6266  4.000000    5  0.600000  1.200000  0.000  ...  0.000000    0    0    0    0
+
+[500 rows x 229 columns]
+           0    1         2         3         4    ...       224  225  226  227  228
+6267  3.555556    9  0.222222  0.555556  0.000000  ...  0.090909    1    1    1    0
+6268  3.538462   13  0.307692  0.384615  0.000000  ...  0.066667    0    0    1    0
+6269  2.583333   12  0.666667  0.416667  0.000000  ...  0.000000    0    0    0    1
+6270  4.695652   23  0.608696  0.434783  0.000000  ...  0.000000    0    0    0    1
+6271  4.736842   19  0.526316  0.631579  0.000000  ...  0.000000    2    2    0    0
+...        ...  ...       ...       ...       ...  ...       ...  ...  ...  ...  ...
+7262  5.333333    9  0.444444  0.333333  0.111111  ...  0.000000    0    0    1    0
+7263  5.444444   18  0.611111  0.222222  0.000000  ...  0.000000    2    2    0    0
+7264  3.875000    8  0.750000  0.625000  0.000000  ...  0.000000    0    0    1    0
+7265  4.583333   12  0.250000  0.583333  0.000000  ...  0.000000    0    0    1    0
+7266  2.750000    8  0.500000  0.875000  0.000000  ...  0.000000    0    0    1    0
+
+[1000 rows x 229 columns]
+SpearmanrResult(correlation=0.7412115010681108, pvalue=3.0045806104165643e-88)
+Mae for Poly svr 0.3417818199408352
+SpearmanrResult(correlation=0.7171209072041503, pvalue=1.1500744793956514e-158)
+Mae for Poly svr 0.3675955659629944
+t = 0 valida_mae = 0.341782 test_MAE = 0.367596 C = 4.531250 gamma = 0.001000
+SpearmanrResult(correlation=0.7411762841823089, pvalue=3.092659772126143e-88)
+Mae for Poly svr 0.34179667618186527
+SpearmanrResult(correlation=0.717102067853708, pvalue=1.1824749661185643e-158)
+Mae for Poly svr 0.36758306633259563
+t = 1 valida_mae = 0.341797 test_MAE = 0.367583 C = 4.562500 gamma = 0.001000
+SpearmanrResult(correlation=0.7412124619654042, pvalue=3.002212646306302e-88)
+Mae for Poly svr 0.341779481500493
+SpearmanrResult(correlation=0.7170821118304863, pvalue=1.217789037011991e-158)
+Mae for Poly svr 0.36758390434603827
+t = 2 valida_mae = 0.341779 test_MAE = 0.367584 C = 4.593750 gamma = 0.001000
+SpearmanrResult(correlation=0.7412012194670718, pvalue=3.0300343690251114e-88)
+Mae for Poly svr 0.34177274227576016
+SpearmanrResult(correlation=0.7170844532411531, pvalue=1.2135918370346028e-158)
+Mae for Poly svr 0.3675646476992159
+t = 3 valida_mae = 0.341773 test_MAE = 0.367565 C = 4.625000 gamma = 0.001000
+SpearmanrResult(correlation=0.741196414980605, pvalue=3.042002044313398e-88)
+Mae for Poly svr 0.34175628276637415
+SpearmanrResult(correlation=0.7170456158421695, pvalue=1.2851141828054668e-158)
+Mae for Poly svr 0.3675569538253967
+t = 4 valida_mae = 0.341756 test_MAE = 0.367557 C = 4.656250 gamma = 0.001000
+SpearmanrResult(correlation=0.7412165938237657, pvalue=2.9920515283807643e-88)
+Mae for Poly svr 0.34175559922508203
+SpearmanrResult(correlation=0.7170430222795848, pvalue=1.2900374687269901e-158)
+Mae for Poly svr 0.3675549768481218
+t = 5 valida_mae = 0.341756 test_MAE = 0.367555 C = 4.687500 gamma = 0.001000
+SpearmanrResult(correlation=0.7412517626647032, pvalue=2.906936636710873e-88)
+Mae for Poly svr 0.3417445116193989
+SpearmanrResult(correlation=0.7171010532424191, pvalue=1.1842455257064332e-158)
+Mae for Poly svr 0.3675478877690784
+t = 6 valida_mae = 0.341745 test_MAE = 0.367548 C = 4.718750 gamma = 0.001000
+SpearmanrResult(correlation=0.7411681165553152, pvalue=3.1134514402672567e-88)
+Mae for Poly svr 0.3417465256567682
+SpearmanrResult(correlation=0.7171479114738408, pvalue=1.105169502952134e-158)
+Mae for Poly svr 0.3675394811800783
+t = 7 valida_mae = 0.341747 test_MAE = 0.367539 C = 4.750000 gamma = 0.001000
+SpearmanrResult(correlation=0.7412702118927358, pvalue=2.863253477539406e-88)
+Mae for Poly svr 0.34173112669659567
+SpearmanrResult(correlation=0.7171374411656282, pvalue=1.1223690719721619e-158)
+Mae for Poly svr 0.36753944843587144
+t = 8 valida_mae = 0.341731 test_MAE = 0.367539 C = 4.781250 gamma = 0.001000
+SpearmanrResult(correlation=0.7412582006765687, pvalue=2.8916182695283644e-88)
+Mae for Poly svr 0.3417286352237837
+SpearmanrResult(correlation=0.7171531706424155, pvalue=1.0966296784358324e-158)
+Mae for Poly svr 0.3675353023072993
+t = 9 valida_mae = 0.341729 test_MAE = 0.367535 C = 4.812500 gamma = 0.001000
+SpearmanrResult(correlation=0.7412803974040455, pvalue=2.839417037732584e-88)
+Mae for Poly svr 0.34172507948304465
+SpearmanrResult(correlation=0.7171811715125437, pvalue=1.0522574656705737e-158)
+Mae for Poly svr 0.3675344841950985
+t = 10 valida_mae = 0.341725 test_MAE = 0.367534 C = 4.843750 gamma = 0.001000
+SpearmanrResult(correlation=0.7412367246220619, pvalue=2.9430326915550887e-88)
+Mae for Poly svr 0.34170922588171865
+SpearmanrResult(correlation=0.7172393585694226, pvalue=9.656930770291679e-159)
+Mae for Poly svr 0.36754271296536956
+t = 11 valida_mae = 0.341709 test_MAE = 0.367543 C = 4.875000 gamma = 0.001000
+SpearmanrResult(correlation=0.7412054474151627, pvalue=3.01954154862184e-88)
+Mae for Poly svr 0.34169936180985916
+SpearmanrResult(correlation=0.7172312416791109, pvalue=9.773283952086895e-159)
+Mae for Poly svr 0.36753731556642255
+t = 12 valida_mae = 0.341699 test_MAE = 0.367537 C = 4.906250 gamma = 0.001000
+SpearmanrResult(correlation=0.7411762841823089, pvalue=3.092659772126143e-88)
+Mae for Poly svr 0.34167740143188213
+SpearmanrResult(correlation=0.7172559765815398, pvalue=9.423007311668835e-159)
+Mae for Poly svr 0.36754158299265
+t = 13 valida_mae = 0.341677 test_MAE = 0.367542 C = 4.937500 gamma = 0.001000
+SpearmanrResult(correlation=0.741118582299842, pvalue=3.2425578911150624e-88)
+Mae for Poly svr 0.34169373584003804
+SpearmanrResult(correlation=0.7173070913774814, pvalue=8.738320845497284e-159)
+Mae for Poly svr 0.36753985965136293
+t = 14 valida_mae = 0.341694 test_MAE = 0.367540 C = 4.968750 gamma = 0.001000
+SpearmanrResult(correlation=0.7409210218163249, pvalue=3.8126303888989985e-88)
+Mae for Poly svr 0.3416730893314198
+SpearmanrResult(correlation=0.7173243337657766, pvalue=8.518732900001766e-159)
+Mae for Poly svr 0.3675475586316929
+t = 15 valida_mae = 0.341673 test_MAE = 0.367548 C = 5.000000 gamma = 0.001000
+SpearmanrResult(correlation=0.7409419693773204, pvalue=3.747743362165824e-88)
+Mae for Poly svr 0.3416727386379496
+SpearmanrResult(correlation=0.7173370434231654, pvalue=8.36040137668474e-159)
+Mae for Poly svr 0.36755090127574375
+t = 16 valida_mae = 0.341673 test_MAE = 0.367551 C = 5.031250 gamma = 0.001000
+SpearmanrResult(correlation=0.7409719493728736, pvalue=3.6567834587843676e-88)
+Mae for Poly svr 0.341651742076194
+SpearmanrResult(correlation=0.7173089885204832, pvalue=8.713886341167715e-159)
+Mae for Poly svr 0.3675581714166791
+t = 17 valida_mae = 0.341652 test_MAE = 0.367558 C = 5.062500 gamma = 0.001000
+SpearmanrResult(correlation=0.7408850362126882, pvalue=3.9267174319065733e-88)
+Mae for Poly svr 0.3416422538848941
+SpearmanrResult(correlation=0.7173184081957044, pvalue=8.593569552940192e-159)
+Mae for Poly svr 0.3675660630354779
+t = 18 valida_mae = 0.341642 test_MAE = 0.367566 C = 5.093750 gamma = 0.001000
+SpearmanrResult(correlation=0.7410650603206012, pvalue=3.388046681382193e-88)
+Mae for Poly svr 0.34165195258143694
+SpearmanrResult(correlation=0.7173445539481504, pvalue=8.268221247005621e-159)
+Mae for Poly svr 0.3675711978018767
+t = 19 valida_mae = 0.341652 test_MAE = 0.367571 C = 5.125000 gamma = 0.001000
+SpearmanrResult(correlation=0.7408290639453494, pvalue=4.110951185657891e-88)
+Mae for Poly svr 0.3416750984675707
+SpearmanrResult(correlation=0.717465250666216, pvalue=6.918488220120806e-159)
+Mae for Poly svr 0.36756160753125794
+t = 20 valida_mae = 0.341675 test_MAE = 0.367562 C = 5.156250 gamma = 0.001000
+SpearmanrResult(correlation=0.7408521735252549, pvalue=4.0338662146830895e-88)
+Mae for Poly svr 0.34167183394687456
+SpearmanrResult(correlation=0.717399799232653, pvalue=7.620600684152027e-159)
+Mae for Poly svr 0.3675835793009193
+t = 21 valida_mae = 0.341672 test_MAE = 0.367584 C = 5.187500 gamma = 0.001000
+SpearmanrResult(correlation=0.7407787609720413, pvalue=4.2838443933082847e-88)
+Mae for Poly svr 0.34168010310826424
+SpearmanrResult(correlation=0.7174794492206442, pvalue=6.774905318173443e-159)
+Mae for Poly svr 0.36758651580592094
+t = 22 valida_mae = 0.341680 test_MAE = 0.367587 C = 5.218750 gamma = 0.001000
+SpearmanrResult(correlation=0.7408472249041941, pvalue=4.0502511120804624e-88)
+Mae for Poly svr 0.3416771241088843
+SpearmanrResult(correlation=0.7174789629276596, pvalue=6.77977346399736e-159)
+Mae for Poly svr 0.3675931383174126
+t = 23 valida_mae = 0.341677 test_MAE = 0.367593 C = 5.250000 gamma = 0.001000
+SpearmanrResult(correlation=0.7408470807696, pvalue=4.050729332605767e-88)
+Mae for Poly svr 0.3416837155215452
+SpearmanrResult(correlation=0.71750067801069, pvalue=6.565752483511213e-159)
+Mae for Poly svr 0.36758712105492614
+t = 24 valida_mae = 0.341684 test_MAE = 0.367587 C = 5.281250 gamma = 0.001000
+SpearmanrResult(correlation=0.7409731024496257, pvalue=3.65332918712936e-88)
+Mae for Poly svr 0.34169569155619095
+SpearmanrResult(correlation=0.7175076662209878, pvalue=6.498320769486688e-159)
+Mae for Poly svr 0.36759404323101486
+t = 25 valida_mae = 0.341696 test_MAE = 0.367594 C = 5.312500 gamma = 0.001000
+SpearmanrResult(correlation=0.7408903691926664, pvalue=3.9095981705250374e-88)
+Mae for Poly svr 0.341702960483767
+SpearmanrResult(correlation=0.7175395094060565, pvalue=6.199691557060599e-159)
+Mae for Poly svr 0.36759966023639057
+t = 26 valida_mae = 0.341703 test_MAE = 0.367600 C = 5.343750 gamma = 0.001000
+SpearmanrResult(correlation=0.7408440058982613, pvalue=4.0609447561914767e-88)
+Mae for Poly svr 0.3417051540484968
+SpearmanrResult(correlation=0.7175596155197057, pvalue=6.018222567051973e-159)
+Mae for Poly svr 0.36759554333673455
+t = 27 valida_mae = 0.341705 test_MAE = 0.367596 C = 5.375000 gamma = 0.001000
+SpearmanrResult(correlation=0.7407260077106353, pvalue=4.4729298193770915e-88)
+Mae for Poly svr 0.34171867267826717
+SpearmanrResult(correlation=0.7175433457173798, pvalue=6.164650476114915e-159)
+Mae for Poly svr 0.36759963814994945
+t = 28 valida_mae = 0.341719 test_MAE = 0.367600 C = 5.406250 gamma = 0.001000
+SpearmanrResult(correlation=0.7406964120739995, pvalue=4.5826207550711194e-88)
+Mae for Poly svr 0.34173121322989425
+SpearmanrResult(correlation=0.717564982753388, pvalue=5.970682373392542e-159)
+Mae for Poly svr 0.36760155998717625
+t = 29 valida_mae = 0.341731 test_MAE = 0.367602 C = 5.437500 gamma = 0.001000
+SpearmanrResult(correlation=0.7407912045919905, pvalue=4.240413663951383e-88)
+Mae for Poly svr 0.3417470204615004
+SpearmanrResult(correlation=0.7176122852524747, pvalue=5.567566312202869e-159)
+Mae for Poly svr 0.3675962331231923
+t = 30 valida_mae = 0.341747 test_MAE = 0.367596 C = 5.468750 gamma = 0.001000
+SpearmanrResult(correlation=0.7408990172683068, pvalue=3.881994819777864e-88)
+Mae for Poly svr 0.3417668689861491
+SpearmanrResult(correlation=0.7176011425391475, pvalue=5.66001149054107e-159)
+Mae for Poly svr 0.3675971291540929
+t = 31 valida_mae = 0.341767 test_MAE = 0.367597 C = 5.500000 gamma = 0.001000
+0.3416422538848941
+[5.09375, 0.001]
+finished at Sat Apr 30 13:03:19 2022
+Time elapsed 438.12001180648804
