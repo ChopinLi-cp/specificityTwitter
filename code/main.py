@@ -7,6 +7,8 @@ from regression import testLinearSVR as LinearSVR
 from regression import testLinear as Linear
 from regression import testPOLYSVR as POLYSVR
 from regression import testLogistic as Logistic
+from regression import testMLP as MLP
+# from regression import testCNN as CNN
 
 print('start at', time.ctime())
 st = time.time()
@@ -31,18 +33,26 @@ parser.add_argument('-gamma', type=str, default=False, help='gamma factor if mod
 args = parser.parse_args()
 
 # ALL = range(5, 233)
-ALL = range(3, 228)
+ALL = range(3, 232)
 # LEXICAL = range(5, 27)
-LEXICAL = range(3, 25)
+LEXICAL = list(range(3, 25)) + list(range(228, 232)) # range(3, 25) + range(228, 232)
+ALL_LEXICAL = range(25, 228)
 # TWEET = range(227, 230)
 # EMOTION = range(230, 233)
 EMOTION = range(225, 228)
+ALL_EMOTION = list(range(3, 225)) + list(range(228, 232))
+PAR = range(228, 230)
+DEIXIS = range(230, 232)
+ALL_DEIXIS = range(3, 230)
+JJ = range(11, 12)
+ALL_JJ = list(range(3, 11)) + list(range(12, 232))
 # DEMO = range(233, 239)
 # SIG_DEMO = [234, 235]
 # EMBEDDING = range(27, 127)
 EMBEDDING = range(25, 125)
 # WORDREP = range(27, 227)
 WORDREP = range(25, 225)
+ALL_WORDREP = list(range(3, 25)) + list(range(225, 232))
 # length = [6]
 average = [3]
 length = [4]
@@ -55,14 +65,15 @@ CONCRETE = [224]
 
 FACTOR = 1
 
-models = {'LINEARSVR': LinearSVR, 'RBFSVR': RBFSVR, 'LINEAR': Linear, 'LOGISTIC': Logistic, 'POLYSVR': POLYSVR}
+models = {'LINEARSVR': LinearSVR, 'RBFSVR': RBFSVR, 'LINEAR': Linear, 'LOGISTIC': Logistic, 'POLYSVR': POLYSVR, 'MLP': MLP} # , 'CNN': CNN}
 '''
 features_group = {'ALL': ALL, 'LEXICAL': LEXICAL, 'WORD': WORDREP, 'TWEET': TWEET, 'EMOTION': EMOTION, 'AVERAGE' : average, 'LENGTH': length,
                   'EMBEDDING': EMBEDDING, 'URL': URL, 'USER': USER, 'DEMO': DEMO, 'CONCRETE': CONCRETE, 'TEMP': TEMP,
                   '': [], 'SIG_DEMO': SIG_DEMO}
 '''
 features_group = {'ALL': ALL, 'LEXICAL': LEXICAL, 'WORD': WORDREP, 'EMOTION': EMOTION, 'AVERAGE': average, 'LENGTH': length,
-                  'EMBEDDING': EMBEDDING, 'CONCRETE': CONCRETE, '': []}
+                  'EMBEDDING': EMBEDDING, 'CONCRETE': CONCRETE, '': [], 'PAR': PAR, 'DEIXIS': DEIXIS, 'JJ': JJ, 'ALL_LEXICAL': ALL_LEXICAL,
+                  'ALL_EMOTION': ALL_EMOTION, 'ALL_WORDREP': ALL_WORDREP, 'ALL_DEIXIS': ALL_DEIXIS, 'ALL_JJ': ALL_JJ}
 
 if args.model.upper() in models:
     logging.basicConfig(filename='.\\logs\\%s logger l4.log' % args.model, level=logging.INFO)
@@ -138,9 +149,24 @@ logging.info('features %s' % args.features)
 logging.info('exclude %s' % args.exclude)
 
 # _c = [i/32 + 17.5 for i in range(1, 129)]
-_c = [i/32 + 14 for i in range(1, 33)]
+# _c = [i/32 + 19.625000 for i in range(1, 33)]
+''' RBFSVR
+SpearmanrResult(correlation=0.7435706961027945, pvalue=4.2902439420391166e-89)
+SpearmanrResult(correlation=0.720022569414593, pvalue=1.5504038103572662e-160)
+t = 12 valida_mae = 0.337441 test_MAE = 0.363657 C = 14.406250 gamma = 0.001000
+'''
+# _c = [14.406250]  # gamma = 0.001000
+
+'''LINEARSVR
+SpearmanrResult(correlation=0.7127798473686194, pvalue=9.694194636644628e-79)
+SpearmanrResult(correlation=0.637351255116972, pvalue=4.3415466880400465e-115)
+t = 22 valida_mae = 0.352965 test_MAE = 0.409402 C = 13.718750 gamma = -1.000000
+'''
+# _c = [13.718750]
+
+
 # _c = [15.84375]
-# _c = [18]
+_c = [20.1875]
 if args.model.upper() == 'LINEARSVR' or args.model.upper() == 'Logistic' or args.model.upper() == 'LINEAR':
     _gamma = [-1]
 else:
