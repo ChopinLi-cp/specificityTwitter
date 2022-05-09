@@ -41,11 +41,14 @@ ALL_LEXICAL = range(25, 228)
 # EMOTION = range(230, 233)
 EMOTION = range(225, 228)
 ALL_EMOTION = list(range(3, 225)) + list(range(228, 232))
-PAR = range(228, 230)
+PAR = range(228, 229)
+ALL_PAR = list(range(3, 11)) + list(range(12, 228)) + list(range(229, 232))
+NON_PAR = range(229, 230)
+ALL_NON_PAR = list(range(3, 11)) + list(range(12, 229)) + list(range(230, 232))
 DEIXIS = range(230, 232)
 ALL_DEIXIS = range(3, 230)
 JJ = range(11, 12)
-ALL_JJ = list(range(3, 11)) + list(range(12, 232))
+ALL_JJ = list(range(3, 11)) + list(range(12, 228)) + list(range(230, 232))
 # DEMO = range(233, 239)
 # SIG_DEMO = [234, 235]
 # EMBEDDING = range(27, 127)
@@ -72,8 +75,9 @@ features_group = {'ALL': ALL, 'LEXICAL': LEXICAL, 'WORD': WORDREP, 'TWEET': TWEE
                   '': [], 'SIG_DEMO': SIG_DEMO}
 '''
 features_group = {'ALL': ALL, 'LEXICAL': LEXICAL, 'WORD': WORDREP, 'EMOTION': EMOTION, 'AVERAGE': average, 'LENGTH': length,
-                  'EMBEDDING': EMBEDDING, 'CONCRETE': CONCRETE, '': [], 'PAR': PAR, 'DEIXIS': DEIXIS, 'JJ': JJ, 'ALL_LEXICAL': ALL_LEXICAL,
-                  'ALL_EMOTION': ALL_EMOTION, 'ALL_WORDREP': ALL_WORDREP, 'ALL_DEIXIS': ALL_DEIXIS, 'ALL_JJ': ALL_JJ}
+                  'EMBEDDING': EMBEDDING, 'CONCRETE': CONCRETE, '': [], 'PAR': PAR, 'NON_PAR': NON_PAR, 'DEIXIS': DEIXIS, 'JJ': JJ, 'ALL_LEXICAL': ALL_LEXICAL,
+                  'ALL_EMOTION': ALL_EMOTION, 'ALL_WORDREP': ALL_WORDREP, 'ALL_DEIXIS': ALL_DEIXIS, 'ALL_JJ': ALL_JJ, 'ALL_PAR': ALL_PAR,
+                  'ALL_NON_PAR': ALL_NON_PAR}
 
 if args.model.upper() in models:
     logging.basicConfig(filename='.\\logs\\%s logger l4.log' % args.model, level=logging.INFO)
