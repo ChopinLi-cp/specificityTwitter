@@ -1,4 +1,4 @@
-start at Mon May  2 10:44:18 2022
+start at Mon May  9 23:21:17 2022
 [225, 226, 227]
       0         1         2
 0     0  0.000000  0.062500
@@ -42,10 +42,10 @@ start at Mon May  2 10:44:18 2022
 7266  0  0.000000  0.000000
 
 [1000 rows x 3 columns]
-SpearmanrResult(correlation=-0.012219563810669907, pvalue=0.7851883508931353)
-SpearmanrResult(correlation=0.08353201553864971, pvalue=0.008221619951443779)
-t = 0 valida_mae = 0.542246 test_MAE = 0.529708 C = 20.187500 gamma = 0.001000
-0.5422458856065525
-[20.1875, 0.001]
-finished at Mon May  2 10:44:20 2022
-Time elapsed 1.5774080753326416
+SpearmanrResult(correlation=-0.01258502943903192, pvalue=0.7789277789704867)
+SpearmanrResult(correlation=0.08325005844057683, pvalue=0.008441567170576755)
+t = 0 valida_mae = 0.542259 test_MAE = 0.529743 C = 19.562500 gamma = 0.001000
+0.5422594670700001
+[19.5625, 0.001]
+finished at Mon May  9 23:21:19 2022
+Time elapsed 1.6105780601501465

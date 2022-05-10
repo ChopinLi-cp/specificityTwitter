@@ -1,4 +1,4 @@
-start at Mon May  2 10:23:13 2022
+start at Mon May  9 23:18:01 2022
 [4]
        0
 0     30
@@ -43,9 +43,9 @@ start at Mon May  2 10:23:13 2022
 
 [1000 rows x 1 columns]
 SpearmanrResult(correlation=0.5192112393605582, pvalue=7.328011802938042e-36)
-SpearmanrResult(correlation=0.45582826177304947, pvalue=1.8451964127570205e-52)
-t = 0 valida_mae = 0.462188 test_MAE = 0.472280 C = 20.187500 gamma = 0.001000
-0.46218793526925617
-[20.1875, 0.001]
-finished at Mon May  2 10:23:14 2022
-Time elapsed 1.438241958618164
+SpearmanrResult(correlation=0.4558145846675424, pvalue=1.859800216110253e-52)
+t = 0 valida_mae = 0.462187 test_MAE = 0.472273 C = 19.562500 gamma = 0.001000
+0.46218697977742895
+[19.5625, 0.001]
+finished at Mon May  9 23:18:02 2022
+Time elapsed 1.3855412006378174

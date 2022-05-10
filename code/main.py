@@ -33,14 +33,14 @@ parser.add_argument('-gamma', type=str, default=False, help='gamma factor if mod
 args = parser.parse_args()
 
 # ALL = range(5, 233)
-ALL = range(3, 228) + list(range(230, 232))
+ALL = range(3, 232) # + list(range(230, 232))
 # LEXICAL = range(5, 27)
-LEXICAL = list(range(3, 25)) + list(range(230, 232)) # range(3, 25) + range(228, 232)
+LEXICAL = list(range(3, 25)) + list(range(228, 232)) # range(3, 25) + range(228, 232)
 ALL_LEXICAL = range(25, 228)
 # TWEET = range(227, 230)
 # EMOTION = range(230, 233)
 EMOTION = range(225, 228)
-ALL_EMOTION = list(range(3, 225)) + list(range(230, 232))
+ALL_EMOTION = list(range(3, 225)) + list(range(228, 232))
 PAR = range(228, 229)
 # ALL_PAR = list(range(3, 11)) + list(range(12, 228)) + list(range(229, 232))
 ALL_PAR = list(range(3, 228)) + list(range(229, 232))
@@ -48,7 +48,7 @@ NON_PAR = range(229, 230)
 # ALL_NON_PAR = list(range(3, 11)) + list(range(12, 229)) + list(range(230, 232))
 ALL_NON_PAR = list(range(3, 229)) + list(range(230, 232))
 DEIXIS = range(230, 232)
-ALL_DEIXIS = range(3, 228)
+ALL_DEIXIS = range(3, 230)
 JJ = range(11, 12)
 # ALL_JJ = list(range(3, 11)) + list(range(12, 228)) + list(range(230, 232))
 ALL_JJ = list(range(3, 11)) + list(range(12, 232))
@@ -58,7 +58,7 @@ ALL_JJ = list(range(3, 11)) + list(range(12, 232))
 EMBEDDING = range(25, 125)
 # WORDREP = range(27, 227)
 WORDREP = range(25, 225)
-ALL_WORDREP = list(range(3, 25)) + list(range(225, 228)) + list(range(230, 232))
+ALL_WORDREP = list(range(3, 25)) + list(range(225, 232))
 # length = [6]
 average = [3]
 length = [4]
@@ -157,7 +157,7 @@ logging.info('exclude %s' % args.exclude)
 
 # _c = [i/32 + 17.5 for i in range(1, 129)]
 # _c = [i/32 + 19.40625 for i in range(1, 33)]
-_c = [i/32 + 19.625000 for i in range(1, 33)]
+# _c = [i/32 + 19.625000 for i in range(1, 33)]
 ''' RBFSVR
 SpearmanrResult(correlation=0.7435706961027945, pvalue=4.2902439420391166e-89)
 SpearmanrResult(correlation=0.720022569414593, pvalue=1.5504038103572662e-160)
@@ -175,7 +175,8 @@ t = 22 valida_mae = 0.352965 test_MAE = 0.409402 C = 13.718750 gamma = -1.000000
 
 # _c = [15.84375]
 # _c = [18.1875]
-_c = [20.1875]
+_c = [19.5625]
+# _c = [20.1875]
 if args.model.upper() == 'LINEARSVR' or args.model.upper() == 'Logistic' or args.model.upper() == 'LINEAR':
     _gamma = [-1]
 else:
